@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="{{ t.lang }}" dir="{{ t.dir }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="x-apple-disable-message-reformatting">
+  <title>{{ t.title }}</title>
+  <style>
+    @media only screen and (max-width: 620px) {
+      .outer { padding:0 !important; }
+      .email { width:100% !important; max-width:100% !important; border-radius:0 !important; }
+      .hero { padding:24px 22px 0 !important; }
+      .hero-column, .hero-image-column { display:block !important; width:100% !important; padding:0 !important; }
+      .hero-column { text-align:{% if is_rtl %}right{% else %}left{% endif %} !important; }
+      .hero-title { font-size:31px !important; line-height:{% if is_rtl %}40px{% else %}36px{% endif %} !important; }
+      .hero-copy { font-size:14px !important; line-height:23px !important; }
+      .hero-image-column { padding-top:18px !important; text-align:center !important; }
+      .hero-photo-shell { width:176px !important; margin:0 auto !important; }
+      .hero-photo-pad { padding:9px 9px 0 !important; }
+      .hero-photo { width:158px !important; height:134px !important; }
+      .main-pad { padding-left:22px !important; padding-right:22px !important; }
+      .credential-cell, .step-cell, .help-cell, .footer-cell { display:block !important; width:100% !important; padding-left:0 !important; padding-right:0 !important; border:0 !important; }
+      .step-card { height:auto !important; }
+      .step-copy { height:auto !important; }
+      .step-cell { padding-bottom:22px !important; }
+      .notice-icon { width:48px !important; }
+      .help { margin-left:-22px !important; margin-right:-22px !important; }
+      .help-cell { padding:14px 22px !important; text-align:{% if is_rtl %}right{% else %}left{% endif %} !important; }
+      .footer { padding:0 !important; }
+      .footer-cell { display:block !important; width:100% !important; text-align:center !important; padding:12px 22px !important; box-sizing:border-box !important; }
+      .footer-pattern { padding:8px 0 12px !important; background:#08264d !important; }
+      .footer-pattern table { margin:0 auto !important; }
+    }
+  </style>
+</head>
+<body style="margin:0;padding:0;background:#e9f0f4;font-family:Arial,Helvetica,sans-serif;color:#06345f;">
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;color:transparent;">{{ t.preheader }}</div>
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#e9f0f4;">
+    <tr>
+      <td class="outer" align="center" style="padding:10px 0;">
+        <table role="presentation" class="email" width="620" cellspacing="0" cellpadding="0" border="0" style="width:620px;max-width:620px;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 14px 38px rgba(7,37,72,.13);">
+          <tr>
+            <td class="hero" style="padding:28px 34px 0;overflow:hidden;background:#071f42;background-image:radial-gradient(circle at 18% 32%,rgba(36,203,210,.18) 0,rgba(36,203,210,0) 24%),radial-gradient(circle at 78% 20%,rgba(185,237,240,.2) 0,rgba(185,237,240,0) 22%),linear-gradient(135deg,#071f42 0%,#072f5a 54%,#0b6f80 100%);">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" dir="{{ t.dir }}" style="direction:{{ t.dir }};">
+                <tr>
+                  <td class="hero-column" width="57%" valign="middle" style="width:57%;padding-{% if is_rtl %}left{% else %}right{% endif %}:22px;text-align:{% if is_rtl %}right{% else %}left{% endif %};color:#ffffff;">
+                    <h1 class="hero-title" style="margin:0;font-size:34px;line-height:{% if is_rtl %}44px{% else %}39px{% endif %};font-weight:800;color:#ffffff;">{{ t.hero_title | safe }}</h1>
+                    <div style="width:48px;height:3px;background:#24cbd2;margin:12px {% if is_rtl %}0 13px auto{% else %}0 13px{% endif %};"></div>
+                    <p class="hero-copy" style="margin:0;font-size:15px;line-height:25px;color:#d8f7f3;">{{ t.hero_tagline | safe }}</p>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin-top:16px;">
+                      <tr>
+                        <td style="width:4px;height:4px;border-radius:50%;background:#8ef2e6;font-size:0;line-height:0;">&nbsp;</td>
+                        <td style="width:42px;font-size:0;line-height:0;">&nbsp;</td>
+                        <td style="width:3px;height:3px;border-radius:50%;background:#ffffff;font-size:0;line-height:0;">&nbsp;</td>
+                        <td style="width:38px;font-size:0;line-height:0;">&nbsp;</td>
+                        <td style="width:5px;height:5px;border-radius:50%;background:#24cbd2;font-size:0;line-height:0;">&nbsp;</td>
+                      </tr>
+                      <tr><td colspan="5" style="height:12px;font-size:0;line-height:0;">&nbsp;</td></tr>
+                      <tr>
+                        <td style="width:4px;height:4px;border-radius:50%;background:#ffffff;font-size:0;line-height:0;">&nbsp;</td>
+                        <td style="width:42px;font-size:0;line-height:0;">&nbsp;</td>
+                        <td style="width:3px;height:3px;border-radius:50%;background:#59d8cb;font-size:0;line-height:0;">&nbsp;</td>
+                        <td style="width:38px;font-size:0;line-height:0;">&nbsp;</td>
+                        <td style="width:4px;height:4px;border-radius:50%;background:#ffffff;font-size:0;line-height:0;">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td class="hero-image-column" width="43%" align="{% if is_rtl %}left{% else %}right{% endif %}" valign="bottom" style="width:43%;">
+                    <table role="presentation" class="hero-photo-shell" cellspacing="0" cellpadding="0" border="0" style="width:204px;background:#e7fbf7;border-radius:108px 108px 0 0;border:1px solid rgba(255,255,255,.55);">
+                      <tr>
+                        <td class="hero-photo-pad" align="center" style="padding:10px 10px 0;">
+                          <img class="hero-photo" src="{{ hero_image_url }}" width="184" height="170" alt="{{ t.hero_alt }}" style="display:block;width:184px;height:170px;object-fit:cover;object-position:52% 35%;border:0;border-radius:98px 98px 0 0;">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <div style="height:28px;margin:24px -34px 0;background:#ffffff;border-radius:70% 70% 0 0/100% 100% 0 0;"></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="main-pad" style="padding:22px 42px 30px;text-align:center;background:#ffffff;">
+              <p style="margin:0 0 18px;font-size:11px;line-height:18px;color:#687d91;">{{ t.greeting_prefix }} <strong style="color:#15bec9;">{{ first_name }}</strong>{% if not is_rtl %},{% endif %}</p>
+              <h2 style="margin:0 0 12px;font-size:24px;line-height:{% if is_rtl %}34px{% else %}30px{% endif %};font-weight:800;color:#062b52;">{{ t.welcome }}</h2>
+              <p style="margin:0 auto 22px;max-width:510px;font-size:13px;line-height:24px;color:#516b84;">{{ t.intro_prefix }} <strong style="color:#15bec9;">{{ business_name }}</strong> {{ t.intro_suffix }}</p>
+
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#f8fbfc;border:1px solid #dce8ee;border-radius:12px;margin:0 0 26px;text-align:{% if is_rtl %}right{% else %}left{% endif %};">
+                <tr>
+                  <td style="padding:16px 18px;border-top:4px solid #24cbd2;border-radius:12px;">
+                    <h3 style="margin:0 0 12px;font-size:15px;line-height:22px;color:#062b52;">{{ t.login_title }}</h3>
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td class="credential-cell" width="50%" style="width:50%;padding-{% if is_rtl %}left{% else %}right{% endif %}:7px;">
+                          <p style="margin:0 0 4px;font-size:10px;line-height:15px;color:#61758a;">{{ t.username }}</p>
+                          <p dir="ltr" style="margin:0;padding:9px 10px;background:#ffffff;border:1px solid #d5e0e7;border-radius:6px;font-size:12px;line-height:18px;font-weight:700;color:#062b52;text-align:left;">{{ platform_username }}</p>
+                        </td>
+                        <td class="credential-cell" width="50%" style="width:50%;padding-{% if is_rtl %}right{% else %}left{% endif %}:7px;">
+                          <p style="margin:0 0 4px;font-size:10px;line-height:15px;color:#61758a;">{{ t.password }}</p>
+                          <p dir="ltr" style="margin:0;padding:9px 10px;background:#ffffff;border:1px solid #d5e0e7;border-radius:6px;font-size:12px;line-height:18px;font-weight:700;color:#062b52;text-align:left;">{{ platform_password }}</p>
+                        </td>
+                      </tr>
+                    </table>
+                    <p style="margin:8px 0 0;font-size:10px;line-height:16px;color:#687d91;">{{ t.privacy }}</p>
+                  </td>
+                </tr>
+              </table>
+
+              <h2 style="margin:0 0 10px;font-size:24px;line-height:{% if is_rtl %}35px{% else %}30px{% endif %};font-weight:800;color:#062b52;">{{ t.next_title }}</h2>
+              <p style="margin:0 auto 20px;max-width:510px;font-size:12px;line-height:22px;color:#516b84;">{{ t.next_copy }}</p>
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="step-cell" width="50%" align="center" valign="top" style="width:50%;padding:0 24px {% if is_rtl %}0 0;border-left{% else %}0 24px;border-right{% endif %}:1px solid #d9e2e8;">
+                    <table role="presentation" class="step-card" width="100%" height="255" cellspacing="0" cellpadding="0" border="0" style="height:255px;">
+                      <tr>
+                        <td align="center" valign="top">
+                          <div style="width:30px;height:30px;border:1px solid #24cbd2;border-radius:50%;font-size:12px;line-height:29px;color:#24cbd2;margin:0 auto 14px;">01</div>
+                          <img src="{{ platform_icon_url }}" width="44" height="44" alt="{{ t.platform_alt }}" style="display:block;width:44px;height:44px;object-fit:contain;border:0;margin:0 auto 14px;">
+                          <h3 style="margin:0 0 8px;font-size:14px;line-height:{% if is_rtl %}22px{% else %}19px{% endif %};font-weight:800;color:#062b52;">{{ t.platform_title }}</h3>
+                          <p class="step-copy" style="height:72px;margin:0;font-size:10px;line-height:18px;color:#5a7086;">{{ t.platform_copy }}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="bottom" style="padding-top:12px;">
+                          <a href="{{ platform_guide_url }}" style="display:inline-block;width:190px;border-radius:6px;padding:10px 0;background:#062b52;color:#ffffff;font-size:10px;line-height:14px;font-weight:700;text-decoration:none;text-align:center;">{{ t.platform_button }}</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td class="step-cell" width="50%" align="center" valign="top" style="width:50%;padding:0 {% if is_rtl %}24px 0 0{% else %}0 0 0 24px{% endif %};">
+                    <table role="presentation" class="step-card" width="100%" height="255" cellspacing="0" cellpadding="0" border="0" style="height:255px;">
+                      <tr>
+                        <td align="center" valign="top">
+                          <div style="width:30px;height:30px;border:1px solid #24cbd2;border-radius:50%;font-size:12px;line-height:29px;color:#24cbd2;margin:0 auto 14px;">02</div>
+                          <img src="{{ integration_icon_url }}" width="44" height="44" alt="{{ t.integration_alt }}" style="display:block;width:44px;height:44px;object-fit:contain;border:0;margin:0 auto 14px;">
+                          <h3 style="margin:0 0 8px;font-size:14px;line-height:{% if is_rtl %}22px{% else %}19px{% endif %};font-weight:800;color:#062b52;">{{ t.integration_title }}</h3>
+                          <p class="step-copy" style="height:72px;margin:0;font-size:10px;line-height:18px;color:#5a7086;">{{ t.integration_copy }}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="bottom" style="padding-top:12px;">
+                          <a href="{{ integration_documentation_url }}" style="display:inline-block;width:190px;border-radius:6px;padding:10px 0;background:#062b52;color:#ffffff;font-size:10px;line-height:14px;font-weight:700;text-decoration:none;text-align:center;">{{ t.integration_button }}</a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin-top:22px;background:#f7fafb;border:1px solid #e0eaf0;border-radius:12px;text-align:{% if is_rtl %}right{% else %}left{% endif %};">
+                <tr>
+                  <td class="notice-icon" width="72" align="center" style="width:72px;color:#24cbd2;font-size:25px;line-height:25px;">&#9993;</td>
+                  <td style="padding:14px 18px;font-size:11px;line-height:20px;color:#4f657b;">{{ t.inbox_note }}</td>
+                </tr>
+              </table>
+
+              <div style="height:18px;line-height:18px;font-size:18px;">&nbsp;</div>
+
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="help" style="margin:0 -42px -30px;background:#f7fafb;border-top:1px solid #e0eaf0;">
+                <tr>
+                  <td class="help-cell" width="52%" valign="top" style="width:52%;padding:18px 16px 18px 42px;text-align:{% if is_rtl %}right{% else %}left{% endif %};">
+                    <h2 style="margin:0 0 7px;font-size:18px;line-height:{% if is_rtl %}27px{% else %}23px{% endif %};font-weight:800;color:#062b52;">{{ t.help_title }}</h2>
+                    <div style="width:38px;height:3px;background:#24cbd2;margin:0 {% if is_rtl %}0 8px auto{% else %}0 8px{% endif %};"></div>
+                    <p style="margin:0;font-size:10px;line-height:18px;color:#5a7086;">{{ t.help_copy }}</p>
+                  </td>
+                  <td class="help-cell" width="48%" valign="top" style="width:48%;padding:20px 42px 18px 16px;">
+                    <p dir="ltr" style="margin:0;font-size:10px;line-height:19px;color:#426079;text-align:left;">sales@qredit.tech<br>+970 56 666 6069<br>+970 56 666 6029<br><strong style="color:#15bec9;">qredit.ps</strong></p>
+                    <img src="{{ support_icon_url }}" width="1" height="1" alt="{{ t.support_alt }}" style="display:block;width:1px;height:1px;border:0;opacity:0;">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="footer" style="padding:0;background:#061f42;color:#ffffff;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="footer-cell" width="72%" valign="middle" style="width:72%;padding:16px 34px;font-size:10px;line-height:16px;color:#ffffff;text-align:{% if is_rtl %}right{% else %}left{% endif %};" dir="{{ t.dir }}">
+                    {{ t.footer_text }}
+                  </td>
+                  <td class="footer-cell footer-pattern" width="28%" align="{% if is_rtl %}left{% else %}right{% endif %}" valign="middle" style="width:28%;padding:10px 30px 10px 0;text-align:{% if is_rtl %}left{% else %}right{% endif %};background:#08264d;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="{% if is_rtl %}left{% else %}right{% endif %}">
+                      <tr>
+                        <td style="width:26px;height:26px;border-radius:50%;border:10px solid rgba(255,255,255,.08);font-size:0;line-height:0;">&nbsp;</td>
+                        <td style="width:12px;font-size:0;line-height:0;">&nbsp;</td>
+                        <td style="width:30px;height:30px;background:rgba(255,255,255,.07);font-size:0;line-height:0;">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <p style="margin:0;padding:10px 20px;background:#e9f0f4;color:#7b8b9d;font:11px Arial,Helvetica,sans-serif;text-align:center;">{{ t.sent_to }} {{ recipient_email }}.</p>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

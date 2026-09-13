@@ -1,0 +1,15 @@
+import os
+
+os.environ.setdefault("FROM_EMAIL", "sender@example.com")
+os.environ.setdefault("GMAIL_EMAIL", "sender@example.com")
+os.environ.setdefault("GMAIL_APP_PASSWORD", "abcdefghijklmnop")
+os.environ.setdefault("ADMIN_EMAIL", "admin@example.com")
+os.environ.setdefault("ADMIN_PASSWORD_HASH", "placeholder-hash-for-tests")
+os.environ.setdefault("JWT_SECRET", "a" * 40)
+os.environ.setdefault("FRONTEND_URL", "http://localhost:5173")
+os.environ.setdefault("QREDIT_PLATFORM_GUIDE_URL", "https://guide.test/platform.pdf")
+os.environ.setdefault("QREDIT_INTEGRATION_DOCUMENTATION_URL", "https://guide.test/integration.pdf")
+os.environ.setdefault("QREDIT_HERO_IMAGE_URL", "https://cdn.test/hero.jpg")
+os.environ.setdefault("QREDIT_PLATFORM_ICON_URL", "https://cdn.test/platform.png")
+os.environ.setdefault("QREDIT_INTEGRATION_ICON_URL", "https://cdn.test/integration.png")
+os.environ.setdefault("QREDIT_SUPPORT_ICON_URL", "https://cdn.test/support.png")
